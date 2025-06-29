@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f3f4;
+}
+
+.home-bg {
+    background-image: url("/static/diabetes_background.jpg"); /* Replace with your actual image name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+.predict-bg {
+    background-color: #fce4ec;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #1c5980;
+}
+
+.result {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #c0392b;
+}
+
+.link {
+    display: block;
+    margin-top: 20px;
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.predict-bg-img {
+    background-image: url("{{ url_for('static', filename='diabetes_predict.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Override container to make background transparent-ish */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
