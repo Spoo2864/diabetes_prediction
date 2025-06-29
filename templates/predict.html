@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-image: url('/static/diabetes_predict.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             min-height: 100vh;">
+
+
+
+    <div class="container">
+        <h2>Enter Your Medical Information</h2>
+        <img src="{{ url_for('static', filename='diabetes_predict.jpg') }}" alt="Prediction" class="main-image">
+        <form method="POST">
+            <input type="text" name="Pregnancies" placeholder="Pregnancies" required><br>
+            <input type="text" name="Glucose" placeholder="Glucose" required><br>
+            <input type="text" name="BloodPressure" placeholder="Blood Pressure" required><br>
+            <input type="text" name="SkinThickness" placeholder="Skin Thickness" required><br>
+            <input type="text" name="Insulin" placeholder="Insulin" required><br>
+            <input type="text" name="BMI" placeholder="BMI" required><br>
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required><br>
+            <input type="text" name="Age" placeholder="Age" required><br><br>
+            <input type="submit" class="btn" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+            <h3 class="result">{{ prediction_text }}</h3>
+        {% endif %}
+
+        <a href="/" class="link">← Back to Home</a>
+    </div>
+</body>
+</html>

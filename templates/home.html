@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-bg">
+    <div class="container">
+        <h1>Welcome to the Diabetes Prediction App</h1>
+        <p>This app uses machine learning to predict whether a person is diabetic based on medical input.</p>
+        <img src="{{ url_for('static', filename='diabetes_home.jpg') }}" alt="Diabetes" class="main-image">
+        <br><br>
+        <a href="/predict" class="btn">Go to Prediction →</a>
+    </div>
+</body>
+</html>
